@@ -1,8 +1,50 @@
-<h1>Add Employee</h1>
-<form action="/employees" method="POST">
-  <label for="name">Name:</label>
-  <input type="text" name="name" required>
-  <label for="designation">Designation:</label>
-  <input type="text" name="designation" required>
-  <button type="submit">Add</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Employee</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+  
+  <style>
+    body {
+      background-color: #d295fa ;
+    }
+    
+    .container {
+      margin-top: 50px;
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+    }
+    .text-primary {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-primary">
+      <h1>Add Employee</h1>
+      <form action="/employees" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="designation" class="form-label">Designation:</label>
+          <input type="text" class="form-control" name="designation" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Add Bootstrap JS (optional, for enhanced functionality) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+</body>
+</html>

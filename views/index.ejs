@@ -1,16 +1,47 @@
-<div style="color:cornflowerblue;">
-<h1>Employee List</h1>
-<ul style="color: brown;">
-  <% employees.forEach((employee) => { %>
-    <li>
-      <strong><%= employee.name %></strong> - <%= employee.designation %>
-      <a href="/employees/<%= employee.id %>/edit">Edit</a>
-      <a href="/employees/<%= employee.id %>/delete">Delete</a>
-     
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee List</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  
+  <style>
+    body {
+      background-color: #d295fa;
+    }
+    
+    .container {
+      margin-top: 50px;
+      margin:70px;
+    }
+    
+    .text-primary {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="text-primary">
+      <h1 style="padding-left: 35%;">Employee List</h1>
+      <ul class="list-group">
+        <% employees.forEach((employee) => { %>
+          <li class="list-group-item">
+            <strong><%= employee.name %></strong> - <%= employee.designation %>
+            <a class="btn btn-primary" href="/employees/<%= employee.id %>/edit">Edit</a>
+            <a class="btn btn-danger" href="/employees/<%= employee.id %>/delete">Delete</a>
+          </li>
+        <% }); %>
+      </ul>
+      <a class="btn btn-success" href="/employees/add">Add Employee</a>
+    </div>
+  </div>
+  
+  <!-- Include Bootstrap JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
 
-      </form>
-    </li>
-  <% }); %>
-</ul>
-<a href="/employees/add">Add Employee</a>
-</div>
