@@ -1,0 +1,10 @@
+<h1>Edit Employee</h1>
+<form action="/employees/<%= employee.id %>?_method=PUT" method="POST">
+  <label for="name">Name:</label>
+  <input type="text" name="name" value="<%= employee.name %>" required>
+  <label for="designation">Designation:</label>
+  <input type="text" name="designation" value="<%= employee.designation %>" required>
+  <button type="submit">Update</button>
+</form>
+
+

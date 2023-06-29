@@ -1,0 +1,16 @@
+<div style="color:cornflowerblue;">
+<h1>Employee List</h1>
+<ul style="color: brown;">
+  <% employees.forEach((employee) => { %>
+    <li>
+      <strong><%= employee.name %></strong> - <%= employee.designation %>
+      <a href="/employees/<%= employee.id %>/edit">Edit</a>
+      <a href="/employees/<%= employee.id %>/delete">Delete</a>
+     
+
+      </form>
+    </li>
+  <% }); %>
+</ul>
+<a href="/employees/add">Add Employee</a>
+</div>
